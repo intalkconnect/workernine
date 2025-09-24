@@ -1,12 +1,11 @@
 {
-  "name": "router-wildcard",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "router-northgate",
+  "private": true,
+  "type": "module",
+  "dependencies": {},
+  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev --local"
+  }
 }
