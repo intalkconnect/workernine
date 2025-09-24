@@ -34,9 +34,7 @@ export default {
     }
 
     // fallback → front no Pages
-    url.hostname = pagesHost;
-    url.protocol = "https:";
-    return fetch(new Request(url.toString(), request));
+    return fetch(request);
   }
 };
 
@@ -82,3 +80,4 @@ type Env = {
   WS_ORIGIN: string;
   EMIT_ORIGIN: string;
 };
+
