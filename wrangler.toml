@@ -1,8 +1,20 @@
-name = "router-wildcard"
+name = "router-northgate"
 main = "src/worker.ts"
 compatibility_date = "2024-11-08"
 
+# cobre TODOS os subdomínios de ninechat.com.br
 routes = [
   { pattern = "*.ninechat.com.br/*", zone_name = "ninechat.com.br" }
 ]
 
+[vars]
+# domínio base para extrair subdomínio (ex.: hmg, clinop)
+BASE_DOMAIN   = "ninechat.com.br"
+
+# PAGES default (se quiser front diferente por host, mapeie no worker.ts)
+PAGES_DEFAULT = "ninefront.pages.dev"   # ajuste se precisar
+
+# UM ÚNICO backend (northgate) para API/WS/emit (com paths!)
+API_V1_ORIGIN = "https://northgate.ninechat.com.br/api/v1"
+WS_ORIGIN     = "https://northgate.ninechat.com.br/socket.io"
+EMIT_ORIGIN   = "https://northgate.ninechat.com.br/emit"
